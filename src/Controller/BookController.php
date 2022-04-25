@@ -22,6 +22,6 @@ class BookController extends AbstractController
     #[Route('/new', name: 'create_book')]
     public function createBook(): Response
     {
-        return $this->json($this->bookService->generateNewBook());
+        return $this->json($this->bookService->generateNewBook(), 201);
     }
 }
